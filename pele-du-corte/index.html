@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pele du Corte | Barbearia em São João del-Rei</title>
+<meta name="description" content="Barbearia em São João del-Rei especializada no público universitário. Corte, barba, sobrancelha, pigmentação e platinado. Agende pelo site ou WhatsApp.">
+<meta name="theme-color" content="#0B1530">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Pele du Corte">
+<meta property="og:title" content="Pele du Corte | Barbearia em São João del-Rei">
+<meta property="og:description" content="Corte, barba e platinado com preço justo. Rua João da Mata, 156. Agende pelo site.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BarberShop",
+  "name":"Pele du Corte",
+  "telephone":"+55 31 99534-7832",
+  "priceRange":"R$ 10 a R$ 80",
+  "paymentAccepted":"Pix, cartão de crédito, cartão de débito, dinheiro",
+  "address":{"@type":"PostalAddress","streetAddress":"Rua João da Mata, 156","addressLocality":"São João del-Rei","addressRegion":"MG","addressCountry":"BR"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"13:00"}
+  ],
+  "sameAs":["https://instagram.com/peledu.corte"]
+}
+</script>
+<style>
+:root{
+  --noite:#0B1530;   /* azul-noite: base */
+  --fundo:#060C1C;   /* azul mais profundo */
+  --esmalte:#2456D6; /* azul-esmalte: ação */
+  --ceu:#9DB8F5;     /* azul claro: detalhes */
+  --papel:#E9E1CC;   /* papel antigo */
+  --cromo:#B9C2CF;   /* moldura cromada */
+  --tinta:#0E1426;   /* texto sobre papel */
+  --suave:#AEB7CC;   /* texto secundário no escuro */
+  --apagado:#8E99B3; /* legendas no escuro */
+  --disp:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --txt:'Newsreader',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--noite);color:var(--papel);font-family:var(--txt);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--ceu);outline-offset:3px}
+.papel :focus-visible,.tiquete :focus-visible{outline-color:var(--esmalte)}
+.w{max-width:1180px;margin:0 auto;padding:0 28px}
+@media(max-width:520px){.w{padding:0 18px}}
+.disp{font-family:var(--disp);font-weight:900;line-height:.92;letter-spacing:-.01em}
+.lead{max-width:34em;color:#C8CEDD}
+.pular{position:absolute;left:-999px;top:8px;z-index:200;background:var(--papel);color:var(--tinta);padding:8px 14px}
+.pular:focus{left:8px}
+
+/* botões */
+.b{display:inline-block;font-family:var(--disp);font-weight:700;font-size:1.15rem;letter-spacing:.03em;padding:.8em 1.4em;border:2px solid var(--esmalte);background:var(--esmalte);color:#fff;text-decoration:none;cursor:pointer;border-radius:3px;transition:background .2s,color .2s,transform .15s;line-height:1.2}
+.b:hover{background:#3466EA}
+.b:active{transform:translateY(1px)}
+.b.v{background:transparent;border-color:var(--papel);color:var(--papel)}
+.b.v:hover{background:var(--papel);color:var(--noite)}
+.b.pq{font-size:1rem;padding:.55em 1em}
+
+/* navegação */
+.nav{position:sticky;top:0;z-index:40;background:rgba(11,21,48,.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid rgba(157,184,245,.14)}
+.nav .w{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.marca{font-family:var(--disp);font-weight:900;font-size:1.7rem;text-decoration:none;display:flex;align-items:center;gap:12px;white-space:nowrap}
+.poste{width:12px;height:30px;border-radius:6px;border:2px solid var(--cromo);background:repeating-linear-gradient(-45deg,var(--esmalte) 0 5px,var(--papel) 5px 10px);background-size:100% 28px;animation:gira 2.4s linear infinite}
+@keyframes gira{to{background-position:0 28px}}
+.links{display:flex;gap:28px;font-family:var(--disp);font-weight:500;font-size:1.1rem}
+.links a{text-decoration:none;color:#C8CEDD}.links a:hover{color:#fff}
+.nav-dir{display:flex;align-items:center;gap:10px}
+.menu{display:none;width:44px;height:44px;background:none;border:2px solid rgba(233,225,204,.3);border-radius:3px;color:var(--papel);cursor:pointer;place-items:center}
+.menu svg{width:22px;height:22px;stroke:currentColor;stroke-width:2;fill:none}
+@media(max-width:900px){
+  .menu{display:grid}
+  .links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--noite);padding:6px 28px 18px;border-bottom:1px solid rgba(157,184,245,.14);box-shadow:0 20px 30px rgba(0,0,0,.35)}
+  .links.on{display:flex}
+  .links a{padding:13px 0;font-size:1.4rem;border-bottom:1px solid rgba(157,184,245,.1)}
+}
+@media(max-width:420px){.marca{font-size:1.45rem;gap:9px}.so-lg{display:none}}
+
+/* hero */
+.hero{padding:72px 0 96px;background:radial-gradient(90% 70% at 85% 20%,#15285A 0%,transparent 60%),var(--noite)}
+.hero .w{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(3.4rem,8.5vw,7.4rem);margin-bottom:28px}
+.hero h1 em{font-style:normal;color:var(--ceu)}
+.hero .lead{font-size:1.2rem;margin-bottom:36px}
+.acoes{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:960px){.hero{padding:48px 0 72px}.hero .w{grid-template-columns:1fr;gap:48px}}
+
+/* o quadro de letras */
+.quadro{position:relative;padding:14px;background:linear-gradient(145deg,#DCE2EA,#8C96A5 45%,#E3E8EF 55%,#7D8797);border-radius:6px;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.feltro{background:repeating-linear-gradient(180deg,#141414 0 9px,#070707 9px 12px);padding:26px 26px 30px;border-radius:2px;overflow:hidden}
+.linha{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;color:#F3F1EA;font-size:clamp(.95rem,2.3vw,1.6rem);letter-spacing:.14em;line-height:1.65;white-space:nowrap}
+.linha.tit{justify-content:center;font-size:clamp(1.15rem,2.8vw,2rem);margin-bottom:10px;color:#fff}
+.linha.azul{color:var(--ceu)}
+.linha .pts{flex:1;border-bottom:3px dotted rgba(243,241,234,.35);transform:translateY(-.35em)}
+.l{display:inline-block;text-shadow:0 2px 0 rgba(0,0,0,.6);animation:cai .5s cubic-bezier(.3,1.4,.5,1) both;animation-delay:calc(var(--i)*22ms + 200ms)}
+@keyframes cai{from{transform:translateY(-26px) rotate(-8deg);opacity:0}}
+.leg{font-size:.9rem;color:var(--apagado);margin-top:14px;font-style:italic}
+@media(max-width:420px){.feltro{padding:18px 16px 22px}.linha{letter-spacing:.08em}}
+
+/* faixa de informações */
+.info{background:var(--esmalte);color:#fff}
+.info .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 30px;padding-top:18px;padding-bottom:18px;font-family:var(--disp);font-weight:700;font-size:1.2rem}
+.info span{display:flex;align-items:center;gap:8px}
+.info span:before{content:"";width:6px;height:6px;background:var(--ceu);border-radius:50%}
+
+/* seções */
+.sec{padding:112px 0}
+@media(max-width:760px){.sec{padding:80px 0}}
+.sec h2{font-size:clamp(2.6rem,5.5vw,4.6rem);margin-bottom:18px}
+.cab{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+@media(max-width:860px){.cab{grid-template-columns:1fr;gap:10px;margin-bottom:40px}}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rev.vis{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.l,.poste{animation:none}html{scroll-behavior:auto}.rev{opacity:1;transform:none;transition:none}}
+
+/* serviços em lista */
+.lista{border-top:2px solid rgba(233,225,204,.25)}
+.item{display:grid;grid-template-columns:1.1fr 1.6fr auto auto;gap:28px;align-items:center;padding:26px 0;border-bottom:1px solid rgba(233,225,204,.15);transition:background .2s}
+.item:hover{background:linear-gradient(90deg,transparent,rgba(36,86,214,.08),transparent)}
+.item h3{font-family:var(--disp);font-weight:700;font-size:2rem;line-height:1}
+.item p{color:var(--suave);font-size:1rem}
+.item .min{color:var(--apagado);font-size:.95rem;white-space:nowrap}
+.preco{font-family:var(--disp);font-weight:900;font-size:2.1rem;color:var(--ceu);white-space:nowrap;min-width:5ch;text-align:right}
+.preco small{font-size:.5em;font-weight:500;color:var(--apagado);margin-right:4px}
+@media(max-width:860px){.item{grid-template-columns:1fr auto;gap:8px 16px}.item p{grid-column:1/-1}.item .min{display:none}}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:64px}
+@media(max-width:860px){.extras{grid-template-columns:1fr}}
+.combos{border:2px solid rgba(233,225,204,.2);border-radius:4px}
+.combos h3,.plano h3{font-family:var(--disp);font-weight:900;font-size:2.2rem;margin-bottom:16px}
+.combos li{list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px dotted rgba(233,225,204,.25)}
+.combos li b{font-family:var(--disp);font-size:1.4rem;color:var(--ceu);white-space:nowrap}
+.combos li s{color:var(--apagado);font-size:.9rem;margin-right:8px;font-family:var(--txt);font-weight:400}
+.plano{background:var(--esmalte);border-radius:4px;position:relative;overflow:hidden}
+.plano:after{content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:repeating-linear-gradient(-45deg,rgba(255,255,255,.12) 0 10px,transparent 10px 20px);pointer-events:none}
+.plano .valor{font-family:var(--disp);font-weight:900;font-size:4.4rem;line-height:1;margin:16px 0 22px}
+.plano .valor span{font-size:1.4rem;font-weight:500}
+.plano .b{background:#fff;color:var(--esmalte);border-color:#fff}
+.plano .b:hover{background:var(--papel)}
+.combos,.plano{padding:clamp(24px,4vw,34px)}
+
+/* sobre em papel */
+.papel{background:var(--papel);color:var(--tinta)}
+.sobre .w{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+@media(max-width:900px){.sobre .w{grid-template-columns:1fr;gap:48px}}
+.retrato{position:relative;aspect-ratio:4/5;background:repeating-linear-gradient(-45deg,#C9BFA4 0 18px,#CFC6AE 18px 36px);border:10px solid #fff;box-shadow:0 18px 40px rgba(14,20,38,.18);transform:rotate(-2deg);display:grid;place-items:center;overflow:hidden;max-width:460px}
+.retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mono{font-family:var(--disp);font-weight:900;font-size:7rem;color:var(--noite);opacity:.85;line-height:1;text-align:center}
+.mono small{display:block;font-size:1rem;letter-spacing:.3em;margin-top:8px;font-weight:700}
+.citacao{font-family:var(--disp);font-weight:900;font-size:clamp(2.4rem,4.8vw,4rem);line-height:.98;color:var(--noite);margin-bottom:32px}
+.sobre p{max-width:36em;margin-bottom:18px;font-size:1.15rem;line-height:1.75}
+.ass{font-style:italic;font-size:1.3rem;margin-top:26px}
+.marcos{display:flex;gap:44px;margin-top:40px;padding-top:26px;border-top:2px solid var(--tinta);flex-wrap:wrap}
+.marcos div{font-size:1rem}
+.marcos b{display:block;font-family:var(--disp);font-weight:900;font-size:3rem;line-height:1;color:var(--esmalte)}
+
+/* produtos */
+.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+@media(max-width:960px){.prods{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.prods{grid-template-columns:1fr}}
+.prod{display:flex;flex-direction:column}
+.foto{aspect-ratio:1;background:radial-gradient(60% 50% at 50% 60%,#13244F,var(--fundo));border-radius:4px;display:grid;place-items:center;margin-bottom:16px;transition:transform .3s}
+.prod:hover .foto{transform:translateY(-4px)}
+@media(max-width:520px){.foto{aspect-ratio:16/10}}
+.pote{width:84px;height:62px;background:linear-gradient(#EFE8D6,#C4B99E);border-radius:6px 6px 12px 12px;position:relative}
+.pote:before{content:"";position:absolute;left:-5px;right:-5px;top:-18px;height:20px;background:var(--esmalte);border-radius:5px}
+.frasco{width:42px;height:98px;background:linear-gradient(90deg,#2B2014,#4A3620 50%,#2B2014);border-radius:9px 9px 6px 6px;position:relative}
+.frasco:before{content:"";position:absolute;top:-22px;left:13px;width:16px;height:24px;background:var(--cromo);border-radius:3px}
+.prod h3{font-family:var(--disp);font-weight:700;font-size:1.6rem;line-height:1.1}
+.prod p{color:var(--suave);font-size:1rem;margin:6px 0 14px;flex:1}
+.prod .rod{display:flex;justify-content:space-between;align-items:center}
+.prod .preco{font-size:1.7rem;min-width:0}
+
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:170px;gap:12px}
+.g{position:relative;overflow:hidden;border-radius:4px;display:flex;align-items:flex-end;padding:18px;text-decoration:none;background:repeating-linear-gradient(-45deg,rgba(36,86,214,.14) 0 14px,transparent 14px 28px),var(--fundo)}
+.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.g:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(6,12,28,.85))}
+.g:hover img{transform:scale(1.05)}
+.g span{position:relative;z-index:1;font-family:var(--disp);font-weight:700;font-size:1.5rem;line-height:1;color:#fff}
+.g1{grid-column:span 3;grid-row:span 2}.g1 span{font-size:2.4rem}.g2{grid-column:span 3}.g3{grid-column:span 2}.g4{grid-column:span 1}.g5,.g6,.g7{grid-column:span 2}
+@media(max-width:760px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.gal>a{grid-column:span 1!important;grid-row:span 1!important}.gal>.g1{grid-column:span 2!important;grid-row:span 2!important}.g4{display:none!important}}
+
+/* chamada */
+.chamada{background:var(--fundo)}
+.chamada .w{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+.chamada h2{font-size:clamp(3rem,7vw,6rem);margin:0;max-width:11em}
+
+/* dicas */
+.posts{border-top:2px solid var(--tinta)}
+.post{border-bottom:1px solid rgba(14,20,38,.2)}
+.post summary{display:grid;grid-template-columns:160px 1fr auto;gap:28px;align-items:baseline;padding:26px 0;cursor:pointer;list-style:none}
+.post summary::-webkit-details-marker{display:none}
+.post .cat{font-style:italic;color:#4F586C}
+.post h3{font-family:var(--disp);font-weight:700;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.05;transition:color .2s}
+.post summary:hover h3{color:var(--esmalte)}
+.post .em{color:#4F586C;font-size:.95rem;white-space:nowrap;display:flex;align-items:center;gap:14px}
+.post .em i{font-style:normal;font-family:var(--disp);font-size:1.8rem;line-height:1;color:var(--esmalte);transition:transform .25s;display:inline-block}
+.post[open] .em i{transform:rotate(45deg)}
+.post .txt{padding:0 0 30px 188px;max-width:calc(188px + 38em)}
+.post .txt p,.post .txt li{margin-bottom:12px}
+.post .txt ul{padding-left:1.2em}
+.post .txt b{font-weight:600}
+@media(max-width:760px){.post summary{grid-template-columns:1fr auto;gap:4px 16px}.post .cat{grid-column:1/-1}.post .em span{display:none}.post .txt{padding-left:0}}
+
+/* contato */
+.contato .w{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:start}
+@media(max-width:900px){.contato .w{grid-template-columns:1fr;gap:40px}}
+.end{font-family:var(--disp);font-weight:900;font-size:clamp(2.6rem,5.5vw,4.4rem);line-height:.95;margin-bottom:26px}
+.dados{display:grid;grid-template-columns:auto 1fr;gap:14px 28px;margin-top:10px}
+.dados dt{color:var(--apagado)}
+.dados a{text-decoration-color:rgba(157,184,245,.5);text-underline-offset:4px}
+.dados a:hover{color:#fff;text-decoration-color:var(--ceu)}
+.mapa{border-radius:4px;overflow:hidden;background:var(--fundo);border:1px solid rgba(157,184,245,.18)}
+.mapa iframe{display:block;width:100%;height:360px;border:0;filter:saturate(.8)}
+.mapa a{display:block;text-align:center;padding:14px;font-family:var(--disp);font-weight:700;font-size:1.1rem;text-decoration:none;background:var(--esmalte);color:#fff}
+.mapa a:hover{background:#3466EA}
+footer{padding:36px 0 96px;color:var(--apagado);font-size:.95rem;border-top:1px solid rgba(157,184,245,.14)}
+footer .w{display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap}
+footer a{text-underline-offset:3px}
+
+/* whatsapp */
+.zap{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;z-index:50;box-shadow:0 10px 28px rgba(0,0,0,.4);transition:transform .2s}
+.zap:hover{transform:scale(1.07)}
+.zap svg{width:31px;height:31px;fill:#fff}
+@media(max-width:520px){.zap{right:16px;bottom:16px;width:56px;height:56px}}
+
+/* agendamento: um tíquete de papel */
+.modal{position:fixed;inset:0;background:rgba(3,6,15,.78);display:none;align-items:center;justify-content:center;z-index:100;padding:16px}
+.modal.on{display:flex}
+body.travado{overflow:hidden}
+.tiquete{background:var(--papel);color:var(--tinta);width:100%;max-width:560px;max-height:92vh;max-height:92dvh;overflow:auto;padding:36px 34px 30px;position:relative;border-radius:4px;animation:abre .28s ease-out;
+  -webkit-mask:radial-gradient(circle 10px at 0 132px,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 10px at 100% 132px,transparent 98%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 10px at 0 132px,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 10px at 100% 132px,transparent 98%,#000) right/51% 100% no-repeat}
+@keyframes abre{from{transform:translateY(24px) rotate(-1deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){.tiquete{animation:none}}
+.fecha{position:absolute;right:10px;top:8px;width:44px;height:44px;background:none;border:none;font-size:2rem;cursor:pointer;color:var(--tinta);line-height:1}
+.tiquete h2{font-family:var(--disp);font-weight:900;font-size:2.5rem;line-height:1;padding-right:36px}
+.passo{color:#4F586C;font-style:italic;margin-top:4px}
+.barra{height:4px;background:rgba(14,20,38,.12);border-radius:2px;margin-top:12px;overflow:hidden}
+.barra i{display:block;height:100%;background:var(--esmalte);transition:width .3s}
+.picote{border-top:2px dashed rgba(14,20,38,.3);margin:22px -34px 24px}
+@media(max-width:520px){.tiquete{padding:30px 20px 24px}.picote{margin-left:-20px;margin-right:-20px}}
+.ops{display:grid;gap:8px}
+.op{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:13px 16px;background:#F4EFE2;border:2px solid transparent;border-radius:3px;font:inherit;color:var(--tinta);cursor:pointer;text-align:left}
+.op:hover{border-color:var(--esmalte)}
+.op b{font-family:var(--disp);font-size:1.4rem;font-weight:700}
+.op small{display:block;color:#4F586C;font-size:.9rem}
+.op .pr{font-family:var(--disp);font-weight:900;font-size:1.4rem;color:var(--esmalte);white-space:nowrap}
+.sub{font-family:var(--disp);font-weight:700;font-size:1.1rem;letter-spacing:.04em;margin:4px 0 8px;color:#4F586C}
+.dias{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+.dia{min-width:66px;padding:10px 6px;text-align:center;background:#F4EFE2;border:2px solid transparent;border-radius:3px;cursor:pointer;font:inherit;color:var(--tinta);scroll-snap-align:start}
+.dia small{display:block;font-size:.8rem;color:#4F586C}
+.dia b{font-family:var(--disp);font-size:1.8rem;line-height:1.1}
+.dia[aria-pressed=true]{border-color:var(--esmalte);background:#fff}
+.horas{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+@media(max-width:480px){.horas{grid-template-columns:repeat(4,1fr)}}
+.hora{padding:10px 0;background:#F4EFE2;border:2px solid transparent;border-radius:3px;cursor:pointer;font-family:var(--disp);font-weight:700;font-size:1.15rem;color:var(--tinta)}
+.hora:hover{border-color:var(--esmalte)}
+.hora[aria-pressed=true]{background:var(--esmalte);color:#fff}
+.tiquete label{display:block;font-size:.95rem;margin-bottom:4px}
+.tiquete input{width:100%;padding:12px;border:2px solid rgba(14,20,38,.2);background:#fff;border-radius:3px;font:inherit;margin-bottom:6px;color:var(--tinta)}
+.tiquete input:focus{border-color:var(--esmalte);outline:none}
+.erro{color:#A3261C;font-size:.95rem;min-height:1.4em}
+.rodape{display:flex;justify-content:space-between;gap:10px;margin-top:24px;flex-wrap:wrap}
+.tiquete .b.v{border-color:var(--tinta);color:var(--tinta)}
+.tiquete .b.v:hover{background:var(--tinta);color:var(--papel)}
+.tiquete .b:disabled{opacity:.4;cursor:not-allowed}
+.resumo{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;font-size:1.05rem}
+.resumo dt{color:#4F586C}
+.resumo dd{font-weight:600}
+.obs{font-size:.95rem;color:#4F586C;margin-top:18px;font-style:italic}
+.carimbo{display:inline-block;border:3px solid var(--esmalte);color:var(--esmalte);font-family:var(--disp);font-weight:900;font-size:1.6rem;padding:4px 16px;transform:rotate(-6deg);border-radius:4px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<a class="pular" href="#servicos">Pular para o conteúdo</a>
+
+<nav class="nav" aria-label="Principal"><div class="w">
+  <a href="#topo" class="marca"><span class="poste" aria-hidden="true"></span>Pele du Corte</a>
+  <div class="links" id="links"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#produtos">Produtos</a><a href="#galeria">Cortes</a><a href="#dicas">Dicas</a><a href="#contato">Contato</a></div>
+  <div class="nav-dir">
+    <button class="b pq" data-agendar>Agendar<span class="so-lg"> horário</span></button>
+    <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="links"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</div></nav>
+
+<header class="hero" id="topo"><div class="w">
+  <div>
+    <h1 class="disp">Corte de respeito, do jeito <em>clássico.</em></h1>
+    <p class="lead">Barbearia em São João del-Rei feita por quem começou cortando o cabelo da galera da faculdade. Estilo, precisão e aquele papo bom na cadeira.</p>
+    <div class="acoes"><button class="b" data-agendar>Agendar horário</button><a class="b v" href="#servicos">Ver serviços e preços</a></div>
+  </div>
+  <div>
+    <div class="quadro" role="img" id="quadro">
+      <div class="feltro" id="feltro"></div>
+    </div>
+    <p class="leg">Valores em reais. Platinado varia conforme o comprimento do cabelo.</p>
+  </div>
+</div></header>
+
+<div class="info"><div class="w">
+  <span>Terça a sexta, 8h às 18h</span><span>Sábado, 8h às 13h</span><span>Rua João da Mata, 156</span><span>Pix, cartão ou dinheiro</span>
+</div></div>
+
+<main>
+<section class="sec" id="servicos"><div class="w">
+  <div class="cab rev"><h2 class="disp">Serviços e preços</h2><p class="lead">Preço justo, sem surpresa na hora de pagar. Atendo universitários, crianças e adultos de todas as idades.</p></div>
+  <div class="lista rev" id="lista"></div>
+  <div class="extras rev">
+    <div class="combos"><h3>Combos</h3><ul id="combos"></ul></div>
+    <div class="plano">
+      <h3>Plano mensal</h3>
+      <p>Quatro cortes por mês com valor fixo. Pra quem não deixa o degradê crescer.</p>
+      <div class="valor">R$ 110<span> por mês</span></div>
+      <a class="b" data-zap="Oi Edson! Vim pelo site e quero saber do plano mensal." target="_blank" rel="noopener">Quero assinar</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec papel sobre" id="sobre"><div class="w">
+  <div class="retrato rev">
+    <div class="mono" aria-hidden="true">ER<small>DESDE A FACULDADE</small></div>
+    <img src="img/edson.jpg" alt="Edson Rayne na cadeira da Pele du Corte" loading="lazy" onerror="this.remove()">
+  </div>
+  <div class="rev">
+    <p class="citacao">“Errei muito corte no começo, e foi errando que aprendi.”</p>
+    <p>Eu sou o Edson Rayne. Há quatro anos, peguei a máquina pela primeira vez para cortar o cabelo dos amigos da faculdade.</p>
+    <p>Com o tempo, os amigos viraram clientes, e os clientes começaram a indicar outros. Trabalhei em outras barbearias, cortei nas horas vagas e fui me aperfeiçoando até abrir a Pele du Corte, há um ano.</p>
+    <p>Hoje a maior parte da minha cadeira é de universitários, e eu sei o que essa galera quer: um corte moderno, bem feito e com preço que cabe no bolso. Aqui você é atendido por mim, do começo ao fim.</p>
+    <p class="ass">Edson Rayne</p>
+    <div class="marcos">
+      <div><b>4 anos</b>cortando cabelo</div>
+      <div><b>1 ano</b>de barbearia própria</div>
+      <div><b>1 cadeira</b>e atendimento só meu</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="produtos"><div class="w">
+  <div class="cab rev"><h2 class="disp">Leve o acabamento pra casa</h2><p class="lead">As mesmas pomadas e óleos que eu uso na cadeira. Reserve pelo WhatsApp e retire na barbearia.</p></div>
+  <div class="prods rev" id="prods"></div>
+</div></section>
+
+<section class="sec" id="galeria" style="padding-top:0"><div class="w">
+  <div class="cab rev"><h2 class="disp">Cortes da semana</h2><p class="lead">Tem corte novo toda semana no Instagram <a href="https://instagram.com/peledu.corte" target="_blank" rel="noopener">@peledu.corte</a>. Toque numa foto pra ver mais.</p></div>
+  <div class="gal rev" id="gal"></div>
+</div></section>
+
+<section class="sec chamada"><div class="w">
+  <h2 class="disp rev">Bora marcar o próximo corte?</h2>
+  <div class="acoes rev"><button class="b" data-agendar>Agendar horário</button><a class="b v" data-zap="Oi Edson! Vim pelo site e quero agendar um horário." target="_blank" rel="noopener">Chamar no WhatsApp</a></div>
+</div></section>
+
+<section class="sec papel" id="dicas"><div class="w">
+  <div class="cab rev"><h2 class="disp" style="color:var(--noite)">Dicas da cadeira</h2><p>Cuidados com cabelo e barba, de quem corta todo dia.</p></div>
+  <div class="posts rev">
+    <details class="post">
+      <summary><span class="cat">Estilo</span><h3>Degradê: qual o tipo certo para o formato do seu rosto</h3><span class="em"><span>Leitura de 2 min</span><i aria-hidden="true">+</i></span></summary>
+      <div class="txt">
+        <p>A altura do degradê muda a proporção do rosto. Uma regra simples pra começar:</p>
+        <ul>
+          <li><b>Rosto redondo:</b> degradê alto ou médio com volume em cima. Alonga o rosto.</li>
+          <li><b>Rosto quadrado:</b> degradê médio ou baixo, com as laterais menos marcadas. Suaviza a mandíbula.</li>
+          <li><b>Rosto comprido:</b> degradê baixo e pouco volume no topo, pra não alongar ainda mais.</li>
+          <li><b>Rosto oval:</b> combina com quase tudo. Aproveita pra testar.</li>
+        </ul>
+        <p>Na dúvida, traz uma foto de referência. A gente ajusta na cadeira pro seu tipo de cabelo.</p>
+      </div>
+    </details>
+    <details class="post">
+      <summary><span class="cat">Cuidados</span><h3>De quanto em quanto tempo cortar para manter o corte em dia</h3><span class="em"><span>Leitura de 1 min</span><i aria-hidden="true">+</i></span></summary>
+      <div class="txt">
+        <ul>
+          <li><b>Degradê navalhado:</b> a cada 2 ou 3 semanas. Depois disso, a transição some.</li>
+          <li><b>Corte social ou na tesoura:</b> a cada 4 a 6 semanas.</li>
+          <li><b>Barba desenhada:</b> acabamento a cada 1 ou 2 semanas pra manter a linha.</li>
+          <li><b>Pigmentação:</b> dura alguns dias. Vale refazer junto com o corte.</li>
+        </ul>
+        <p>Se você corta toda semana ou a cada quinze dias, o plano mensal sai mais em conta.</p>
+      </div>
+    </details>
+    <details class="post">
+      <summary><span class="cat">Produtos</span><h3>Pomada, cera ou gel: qual usar no seu cabelo</h3><span class="em"><span>Leitura de 2 min</span><i aria-hidden="true">+</i></span></summary>
+      <div class="txt">
+        <ul>
+          <li><b>Pomada de efeito seco:</b> fixação média, sem brilho. Boa pra degradê, topete e cabelo com textura.</li>
+          <li><b>Pomada com brilho:</b> pra penteado clássico, com risca e laterais alinhadas.</li>
+          <li><b>Cera:</b> fixação mais forte e moldável. Funciona bem em cabelo grosso ou mais comprido.</li>
+          <li><b>Gel:</b> segura bastante, mas endurece e pode ressecar o fio com o uso diário.</li>
+        </ul>
+        <p>Use pouco: uma porção do tamanho de uma ervilha, aquecida nas mãos, no cabelo seco ou levemente úmido. Dá pra colocar mais depois, tirar não.</p>
+      </div>
+    </details>
+  </div>
+</div></section>
+
+<section class="sec contato" id="contato"><div class="w">
+  <div class="rev">
+    <h2 class="end">Rua João da Mata, 156. São João del-Rei.</h2>
+    <dl class="dados">
+      <dt>Horário</dt><dd>Terça a sexta, 8h às 18h.<br>Sábado, 8h às 13h.<br>Domingo e segunda, fechado.</dd>
+      <dt>WhatsApp</dt><dd><a data-zap="Oi Edson! Vim pelo site." target="_blank" rel="noopener">(31) 99534-7832</a></dd>
+      <dt>Instagram</dt><dd><a href="https://instagram.com/peledu.corte" target="_blank" rel="noopener">@peledu.corte</a></dd>
+      <dt>Pagamento</dt><dd>Pix, cartão de crédito, débito e dinheiro</dd>
+    </dl>
+  </div>
+  <div class="mapa rev">
+    <iframe title="Mapa com a localização da Pele du Corte" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Rua%20Jo%C3%A3o%20da%20Mata%2C%20156%2C%20S%C3%A3o%20Jo%C3%A3o%20del-Rei%20-%20MG&z=16&output=embed"></iframe>
+    <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rua+Jo%C3%A3o+da+Mata+156+S%C3%A3o+Jo%C3%A3o+del-Rei+MG">Abrir rota no Google Maps</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="w"><span>Pele du Corte, barbearia em São João del-Rei</span><span><a href="https://instagram.com/peledu.corte" target="_blank" rel="noopener">Instagram</a> · © <span id="ano">2026</span></span></div></footer>
+
+<a class="zap" data-zap="Oi Edson! Vim pelo site." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="tiquete" id="tiquete">
+  <button class="fecha" id="fecha" aria-label="Fechar">×</button>
+  <h2 id="mt">Agendar horário</h2>
+  <p class="passo" id="passo" aria-live="polite"></p>
+  <div class="barra" aria-hidden="true"><i id="barra"></i></div>
+  <div class="picote"></div>
+  <div id="corpo"></div>
+</div></div>
+
+<script>
+/* ============ DADOS: edite aqui ============ */
+const FONE='5531995347832';
+const S=[
+ {id:'c',n:'Corte',p:35,m:40,d:'Degradê, social, tesoura ou o que você imaginar. Acabamento na navalha e finalização.'},
+ {id:'b',n:'Barba',p:25,m:30,d:'Desenho, alinhamento na navalha e toalha quente.'},
+ {id:'s',n:'Sobrancelha',p:10,m:15,d:'Limpeza e alinhamento na navalha, discreto e natural.'},
+ {id:'g',n:'Pigmentação',p:20,m:20,d:'Preenche falhas no corte ou na barba e deixa o visual mais marcado.'},
+ {id:'l',n:'Luzes e platinado',p:80,m:120,d:'Descoloração com cuidado para o fio. O valor final depende do cabelo.',ap:1},
+ {id:'cb',n:'Corte e barba',p:55,m:70,cmb:1},
+ {id:'cs',n:'Corte e sobrancelha',p:42,m:50,cmb:1},
+ {id:'cbs',n:'Corte, barba e sobrancelha',p:65,m:80,cmb:1}
+];
+const P=[
+ ['Pomada modeladora','Fixação média e efeito seco, pra degradê e topete.',45,'pote'],
+ ['Óleo para barba','Hidrata e amacia sem deixar a barba pesada.',40,'frasco'],
+ ['Pomada com brilho','Penteado clássico alinhado o dia inteiro.',45,'pote'],
+ ['Balm pós-barba','Acalma a pele depois da navalha.',35,'frasco']
+];
+/* Galeria: coloque as fotos em img/galeria/ com estes nomes. Sem foto, o bloco aparece com a textura azul. */
+const G=[['degrade','Degradê'],['platinado','Platinado'],['barba','Barba desenhada'],['social','Social'],['pigmentacao','Pigmentação'],['infantil','Corte infantil'],['cadeira','A cadeira']];
+/* Horário de funcionamento: dia da semana (0 = domingo) -> [abre, fecha] em horas */
+const EXPEDIENTE={2:[8,18],3:[8,18],4:[8,18],5:[8,18],6:[8,13]};
+/* =========================================== */
+
+const $=id=>document.getElementById(id);
+const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const linkZap=t=>'https://wa.me/'+FONE+'?text='+encodeURIComponent(t);
+const valor=s=>(s.ap?'a partir de ':'')+'R$ '+s.p;
+const pega=id=>S.find(s=>s.id===id);
+$('ano').textContent=new Date().getFullYear();
+
+/* quadro de letras, montado a partir dos serviços */
+const Q=[['PELE DU CORTE','','tit'],['CORTE',pega('c').p],['BARBA',pega('b').p],['SOBRANCELHA',pega('s').p],['PIGMENTAÇÃO',pega('g').p],['PLATINADO',pega('l').p+'+'],['CORTE+BARBA',pega('cb').p,'azul']];
+let li=0;const sp=t=>[...String(t)].map(c=>c===' '?'<span class="l" style="--i:'+(li++)+'">&nbsp;</span>':'<span class="l" style="--i:'+(li++)+';transform:rotate('+((Math.random()-.5)*3).toFixed(1)+'deg)">'+c+'</span>').join('');
+$('feltro').innerHTML=Q.map(r=>r[2]==='tit'?`<div class="linha tit" aria-hidden="true">${sp(r[0])}</div>`:`<div class="linha ${r[2]||''}" aria-hidden="true"><span>${sp(r[0])}</span><span class="pts"></span><span>${sp(r[1])}</span></div>`).join('');
+$('quadro').setAttribute('aria-label','Quadro de preços: '+Q.slice(1).map(r=>r[0].toLowerCase()+' '+r[1]+' reais').join(', '));
+
+/* listas */
+$('lista').innerHTML=S.filter(s=>!s.cmb).map(s=>`<div class="item"><h3>${s.n}</h3><p>${s.d}</p><span class="min">${s.m} min</span><span class="preco">${s.ap?'<small>a partir de</small>':''}${s.p}</span></div>`).join('');
+/* combo mostra o preço avulso riscado (soma de corte, barba e sobrancelha) */
+const avulso=s=>[...s.id].filter(k=>'cbs'.includes(k)).reduce((t,k)=>t+pega(k).p,0);
+$('combos').innerHTML=S.filter(s=>s.cmb).map(s=>{const a=avulso(s);return `<li><span>${s.n}</span><b>${a>s.p?`<s>R$ ${a}</s>`:''}R$ ${s.p}</b></li>`}).join('');
+$('prods').innerHTML=P.map(p=>`<div class="prod"><div class="foto" aria-hidden="true"><div class="${p[3]}"></div></div><h3>${p[0]}</h3><p>${p[1]}</p><div class="rod"><span class="preco">${p[2]}</span><a class="b pq" data-zap="Oi Edson, vi no site o produto ${esc(p[0])} e quero reservar." target="_blank" rel="noopener">Reservar</a></div></div>`).join('');
+$('gal').innerHTML=G.map((g,k)=>`<a class="g g${k+1}" href="https://instagram.com/peledu.corte" target="_blank" rel="noopener"><img src="img/galeria/${g[0]}.jpg" alt="${g[1]} feito na Pele du Corte" loading="lazy" onerror="this.remove()"><span>${g[1]}</span></a>`).join('');
+
+/* links de WhatsApp com href de verdade */
+document.querySelectorAll('[data-zap]').forEach(a=>a.href=linkZap(a.dataset.zap));
+
+/* menu no celular */
+const menu=$('menu'),links=$('links');
+menu.onclick=()=>{const on=links.classList.toggle('on');menu.setAttribute('aria-expanded',on);menu.setAttribute('aria-label',on?'Fechar menu':'Abrir menu')};
+links.addEventListener('click',e=>{if(e.target.tagName==='A'){links.classList.remove('on');menu.setAttribute('aria-expanded',false)}});
+
+/* aparecer ao rolar */
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.rev').forEach(el=>io.observe(el))}
+else document.querySelectorAll('.rev').forEach(el=>el.classList.add('vis'));
+
+/* ============ agendamento ============
+   O cliente escolhe serviço, dia e horário, e o pedido sai
+   pelo WhatsApp do próprio cliente. O Edson confirma por lá. */
+let E={};
+const DN=['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
+const chave=d=>d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+const dataLonga=d=>DN[d.getDay()]+', '+d.getDate()+' de '+d.toLocaleString('pt-BR',{month:'long'});
+function horas(d){
+  const ex=EXPEDIENTE[d.getDay()];if(!ex)return[];
+  const dur=E.s?E.s.m:30,agora=new Date(),hoje=chave(d)===chave(agora);
+  const min=hoje?agora.getHours()*60+agora.getMinutes()+30:0,r=[];
+  for(let t=ex[0]*60;t+dur<=ex[1]*60;t+=30)if(t>=min)r.push(String(t/60|0).padStart(2,'0')+':'+String(t%60).padStart(2,'0'));
+  return r;
+}
+function dias(){const r=[],d=new Date();d.setHours(0,0,0,0);while(r.length<12){if(horas(d).length)r.push(new Date(d));d.setDate(d.getDate()+1)}return r}
+
+let ultimoFoco=null;
+function abrir(){ultimoFoco=document.activeElement;E={p:0,s:null,d:null,t:null,n:''};$('modal').classList.add('on');document.body.classList.add('travado');desenha()}
+function fechar(){$('modal').classList.remove('on');document.body.classList.remove('travado');ultimoFoco&&ultimoFoco.focus()}
+document.querySelectorAll('[data-agendar]').forEach(b=>b.onclick=abrir);
+$('fecha').onclick=fechar;
+$('modal').addEventListener('click',e=>{if(e.target.id==='modal')fechar()});
+addEventListener('keydown',e=>{
+  if(!$('modal').classList.contains('on'))return;
+  if(e.key==='Escape')fechar();
+  if(e.key==='Tab'){const f=[...$('tiquete').querySelectorAll('button:not(:disabled),input,a[href]')];const a=f[0],z=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}
+});
+function vai(p){E.p=p;desenha()}
+function mensagem(){return `Oi Edson! Quero agendar pelo site:\n\n• Serviço: ${E.s.n} (${valor(E.s)})\n• Dia: ${dataLonga(E.d)}\n• Horário: ${E.t}\n• Nome: ${E.n}\n\nTem esse horário livre?`}
+
+function desenha(){
+  const c=$('corpo'),PS=['Passo 1 de 4: escolha o serviço','Passo 2 de 4: escolha o dia e o horário','Passo 3 de 4: seu nome','Passo 4 de 4: confira e envie',''];
+  $('passo').textContent=PS[E.p];$('barra').style.width=Math.min(100,(E.p+1)*25)+'%';
+  $('mt').textContent=E.p===4?'Pedido enviado':'Agendar horário';
+  if(E.p===0)c.innerHTML='<div class="ops">'+S.map(s=>`<button class="op" data-s="${s.id}"><span><b>${s.n}</b><small>${s.m} minutos</small></span><span class="pr">${valor(s)}</span></button>`).join('')+'</div>';
+  if(E.p===1){const ds=dias();if(!E.d||!ds.some(d=>chave(d)===chave(E.d)))E.d=ds[0];const hs=horas(E.d);if(!hs.includes(E.t))E.t=null;
+    c.innerHTML=`<p class="sub">DIA</p><div class="dias">${ds.map((d,k)=>`<button class="dia" data-d="${k}" aria-pressed="${chave(d)===chave(E.d)}" aria-label="${dataLonga(d)}"><small>${DN[d.getDay()].slice(0,3)}</small><b>${d.getDate()}</b></button>`).join('')}</div>
+    <p class="sub" style="margin-top:16px">HORÁRIO</p><div class="horas">${hs.map(t=>`<button class="hora" data-t="${t}" aria-pressed="${E.t===t}">${t}</button>`).join('')}</div>
+    <div class="rodape"><button class="b v pq" data-vai="0">Voltar</button><button class="b pq" ${E.t?'':'disabled'} data-vai="2">Continuar</button></div>`}
+  if(E.p===2)c.innerHTML=`<label for="nm">Seu nome</label><input id="nm" autocomplete="name" value="${esc(E.n)}" maxlength="60"><p class="erro" id="er" role="alert"></p><div class="rodape"><button class="b v pq" data-vai="1">Voltar</button><button class="b pq" id="okNome">Continuar</button></div>`;
+  if(E.p===3)c.innerHTML=`<dl class="resumo"><dt>Serviço</dt><dd>${E.s.n}</dd><dt>Valor</dt><dd>${valor(E.s)}</dd><dt>Quando</dt><dd>${dataLonga(E.d)}, às ${E.t}</dd><dt>Nome</dt><dd>${esc(E.n)}</dd><dt>Onde</dt><dd>Rua João da Mata, 156</dd></dl>
+    <p class="obs">O pedido abre no seu WhatsApp já escrito. É só enviar, e o Edson confirma o horário por lá.</p>
+    <div class="rodape"><button class="b v pq" data-vai="2">Voltar</button><a class="b pq" id="envia" href="${esc(linkZap(mensagem()))}" target="_blank" rel="noopener">Enviar pelo WhatsApp</a></div>`;
+  if(E.p===4)c.innerHTML=`<div class="carimbo">Quase lá</div><p style="font-size:1.2rem;margin-bottom:6px"><b>${E.s.n}</b></p><p style="font-size:1.2rem">${dataLonga(E.d)}, às ${E.t}</p>
+    <p class="obs">Envie a mensagem que abriu no seu WhatsApp. O horário fica garantido quando o Edson responder. Pagamento na barbearia.</p>
+    <div class="rodape"><button class="b v pq" id="fim">Fechar</button><a class="b pq" href="${esc(linkZap(mensagem()))}" target="_blank" rel="noopener">Abrir o WhatsApp de novo</a></div>`;
+  const f=c.querySelector('[aria-pressed=true],input,.op,#envia,#fim');
+  if(f){f.focus({preventScroll:true});if(E.p===1)f.scrollIntoView({block:'nearest',inline:'nearest'})}
+}
+$('corpo').addEventListener('click',e=>{
+  const b=e.target.closest('button,a');if(!b)return;
+  if(b.dataset.s){E.s=pega(b.dataset.s);vai(1)}
+  else if(b.dataset.d){E.d=dias()[+b.dataset.d];E.t=null;desenha()}
+  else if(b.dataset.t){E.t=b.dataset.t;desenha()}
+  else if(b.dataset.vai){vai(+b.dataset.vai)}
+  else if(b.id==='okNome')nome();
+  else if(b.id==='envia')setTimeout(()=>vai(4),300);
+  else if(b.id==='fim')fechar();
+});
+$('corpo').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='nm')nome()});
+function nome(){const n=$('nm').value.trim().replace(/\s+/g,' ');if(n.length<2){$('er').textContent='Digite seu nome para continuar.';$('nm').focus();return}E.n=n;vai(3)}
+</script>
+</body>
+</html>

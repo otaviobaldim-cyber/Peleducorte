@@ -1,0 +1,12 @@
+Fotos do site (formato .jpg). Enquanto a foto não existir, o site mostra um fundo decorativo no lugar.
+
+img/edson.jpg                  -> foto do Edson na seção "Sobre" (vertical, proporção 4:5)
+img/galeria/degrade.jpg        -> bloco grande da galeria
+img/galeria/platinado.jpg
+img/galeria/barba.jpg
+img/galeria/social.jpg
+img/galeria/pigmentacao.jpg
+img/galeria/infantil.jpg
+img/galeria/cadeira.jpg
+
+Dica: deixe cada foto com menos de 300 KB (1200px de largura já basta).
